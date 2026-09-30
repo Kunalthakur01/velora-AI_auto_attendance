@@ -6,7 +6,7 @@ import io
 
 @st.dialog("Share Class Link")
 def share_subject_dialog(subject_name, subject_code):
-    app_domain = "https://velora-ai-auto-attendance.streamlit.app/"
+    app_domain = "velora-ai-auto-attendance.streamlit.app"
     join_url = f"https://{app_domain}/?join-code={subject_code}"     # FIX: added https:// so it's clickable and scans as a link
 
     st.header(f"Join {subject_name}")     # FIX: was a duplicate "Scan to Join" heading
