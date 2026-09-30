@@ -41,7 +41,7 @@ def header_dashboard():
     st.markdown(f"""
         <div style="display:flex; align-items:center; justify-content:center; gap:10px">
             {logo_html}
-            <h2 style='text-align:left; color:#2C3B4D'>SNAP<br/>CLASS</h2>
+            <h2 style='text-align:left; color:#2C3B4D'>Velora</h2>
         </div>   
                 
                 """, unsafe_allow_html=True)
