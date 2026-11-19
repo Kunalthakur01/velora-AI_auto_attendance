@@ -216,28 +216,33 @@ def teacher_tab_manage_subjects():
     # LIST all SUBJECTS
     subjects = get_teacher_subjects(teacher_id)
     if subjects:
-        # FIX: everything below is now inside the loop, so every subject gets a card
-        # (before, only the last subject was shown)
         for sub in subjects:
             stats = [
                 ("🫂", "Students", sub['total_students']),
                 ("🕰️", "Classes", sub['total_classes']),
             ]
-
+    
             def share_btn(sub=sub):
-                if st.button(f"Share Code: {sub['name']}", key=f"share_{sub['subject_code']}", icon=":material/share:"):
-                    share_subject_dialog(sub['name'], sub['subject_code'])
+                if st.button(
+                    f"Share Code: {sub['name']}",
+                    key=f"share_{sub['subject_id']}",
+                    icon=":material/share:"
+                ):
+                    share_subject_dialog(
+                        sub['name'],
+                        sub['subject_code']
+                    )
                 st.space()
-
+    
             subject_card(
-                name = sub['name'],
-                code = sub['subject_code'],
-                section = sub['section'],
+                name=sub['name'],
+                code=sub['subject_code'],
+                section=sub['section'],
                 stats=stats,
                 footer_callback=share_btn
             )
     else:
-        st.info("No subjects found. Create one above!")     # FIX: softer text
+        st.info("No subjects found. Create one above!")
 
 
 def teacher_tab_attendance_records():
