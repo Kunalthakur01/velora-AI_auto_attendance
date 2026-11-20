@@ -141,8 +141,11 @@ def student_screen():
                         time.sleep(1)
                         st.rerun()
                     else:
-                        # FIX: no more silent failure
-                        st.error('Student record not found. Please contact your teacher.')
+                        st.info(
+                            'Face not recognized! '
+                            'Please create a new student profile.'
+                        )
+                        show_registration = True
                 else:
                     st.info('Face not recognized! You might be a new student!')
                     show_registration = True
