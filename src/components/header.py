@@ -27,7 +27,7 @@ def header_home():
     st.markdown(f"""
         <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; margin-bottom:30px; margin-top:30px">
             {logo_html}
-            <h1 style='text-align:center; color:#B2563A'>Velora</h1>
+            <h1 style='text-align:center; color:#EEE9DF'>Velora</h1>
         </div>   
                 
                 """, unsafe_allow_html=True)
