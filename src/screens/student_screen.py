@@ -195,4 +195,3 @@ def student_screen():
     footer_dashboard()
 
 
-this is my code and i can't register as a new student
