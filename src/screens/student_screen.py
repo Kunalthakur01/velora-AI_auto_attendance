@@ -191,5 +191,4 @@ def student_screen():
                     st.warning('Please enter your name!')
 
 
-
     footer_dashboard()
